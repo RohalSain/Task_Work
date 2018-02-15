@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_bg"
+    android:id="@+id/layout"
+    tools:context="com.example.rohal.task_work.Sign_up">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/pass_pic"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:layout_below="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="63dp"
+            android:onClick="Dialog_box"
+            android:src="@drawable/ic_placeholder"
+            app:placeholderImage="@drawable/ic_placeholder"
+            app:roundAsCircle="true" />
+
+
+        <ImageView
+            android:id="@+id/btn_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/ic_back" />
+
+        <ImageView
+            android:id="@+id/btn_ok"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/pass_pic"
+            android:layout_alignEnd="@+id/view1"
+            android:layout_alignRight="@+id/view1"
+            android:onClick="Animation"
+            android:src="@drawable/ic_check" />
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Sign Up"
+        android:textColor="#D37f08"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:textStyle="bold"/>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass_pic"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="4dp"
+            app:hintTextAppearance="@color/white"
+            android:textColorHighlight="@color/white"
+            android:id="@+id/name">
+    <EditText
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pass_pic"
+        android:textSize="16sp"
+        android:layout_marginLeft="28dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_name"
+        android:ems="18"
+        android:inputType="textPersonName"
+        android:textColor="@color/white"
+        android:hint=" Name"
+        android:nextFocusDown="@+id/txt_email"/>
+        </android.support.design.widget.TextInputLayout>
+    <View
+        android:layout_below="@+id/pass_pic"
+        android:layout_marginTop="98dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/view1"
+        android:background="@color/white"/>
+
+    <View
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="44dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/view4"
+        android:background="@color/white"/>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:id="@+id/old"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="4dp"
+            app:hintTextAppearance="@color/white"
+            android:textColorHint="@color/white">
+
+        <EditText
+        android:id="@+id/txt_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_email"
+        android:ems="18"
+        android:inputType="textEmailSubject"
+        android:hint=" Email"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
+            android:layout_marginLeft="26dp"
+        android:textSize="16sp"
+        android:background="@android:color/transparent"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+                  <android.support.design.widget.TextInputLayout
+           android:layout_width="wrap_content"
+           android:layout_height="50dp"
+                      app:hintTextAppearance="@color/white"
+                      android:layout_marginRight="30dp"
+           android:id="@+id/pass"
+                      android:layout_marginTop="12dp"
+                      android:paddingBottom="12dp"
+           android:layout_below="@+id/old"
+           android:textColorHint="@color/white"
+                      app:passwordToggleTint="#D37f08"
+                      app:passwordToggleEnabled="true"
+                      app:passwordToggleDrawable="@drawable/icon_selector">
+
+           <EditText
+        android:id="@+id/txt_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:ems="18"
+               android:drawableStart="@drawable/ic_password_signup"
+               android:paddingLeft="5dp"
+        android:inputType="textPassword"
+        android:hint=" Password"
+               android:paddingStart="12dp"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+               android:nextFocusDown="@+id/txt_phonenumber"
+               android:layout_marginLeft="26dp"
+        android:background="@android:color/transparent"/>
+                  </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+    <View
+        android:layout_below="@+id/view4"
+        android:layout_marginTop="46dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/view7"
+        android:background="@color/white"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pass"
+            android:layout_marginLeft="4dp"
+            android:id="@+id/ph"
+            app:hintTextAppearance="@color/white"
+            android:textColorHint="@color/white">
+
+
+    <EditText
+        app:hintTextAppearance="@color/white"
+        android:textColor="@color/white"
+        android:layout_below="@+id/txt_password"
+        android:layout_marginTop="25dp"
+        android:id="@+id/txt_phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txt_password"
+        android:layout_alignStart="@+id/txt_password"
+        android:drawableLeft="@drawable/ic_phone_number"
+        android:ems="18"
+        android:layout_marginLeft="26dp"
+        android:inputType="number"
+        android:hint=" Phone Number"
+        android:paddingBottom="3dp"
+        android:textColorHint="@color/white"
+        android:textSize="16sp"
+        android:background="@android:color/transparent"/>
+        </android.support.design.widget.TextInputLayout>
+    <View
+        android:layout_below="@+id/view7"
+        android:layout_marginTop="48dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/view8"
+        android:background="@color/white"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/txt_country"
+
+            android:layout_width="match_parent"
+            android:layout_below="@+id/ph"
+            android:layout_marginTop="15dp"
+            app:hintTextAppearance="@color/white"
+            android:layout_marginRight="40dp"
+            android:layout_marginLeft="4dp"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/white">
+
+
+    <TextView
+        app:hintTextAppearance="@color/white"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/txt_phonenumber"
+        android:id="@+id/btn_country"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/ic_country"
+        android:ems="18"
+        android:inputType="textPersonName"
+        android:hint="Country"
+        android:drawableRight="@drawable/ic_dropdown_arrow"
+        android:drawablePadding="5dp"
+        android:textSize="16sp"
+        android:layout_marginLeft="26dp"
+        android:textColorHint="@color/white"
+        android:paddingLeft="6dp"
+        android:background="@android:color/transparent"/>
+        </android.support.design.widget.TextInputLayout>
+
+
+
+    <View
+        android:layout_below="@+id/view7"
+        android:layout_marginTop="96dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginRight="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:id="@+id/view10"
+        android:background="@color/white"/>
+
+    </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
